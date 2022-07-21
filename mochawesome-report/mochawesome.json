@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-21T06:10:31.341Z",
+    "end": "2022-07-21T06:10:31.912Z",
+    "duration": 571,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a46c6981-5564-48b9-93cd-608b841ebbe0",
+      "title": "",
+      "fullFile": "F:\\VS code - projects\\webdriverio\\APIAutomation\\test\\index.js",
+      "file": "\\test\\index.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3cadf9fb-e2e0-4b5b-b019-8dea7fc80571",
+          "title": "Airports",
+          "fullFile": "F:\\VS code - projects\\webdriverio\\APIAutomation\\test\\index.js",
+          "file": "\\test\\index.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test_04_POST create users",
+              "fullTitle": "Airports Test_04_POST create users",
+              "timedOut": false,
+              "duration": 560,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const data = {\n            \"name\": \"Shaun Marsh\",\n            \"email\": \"tim3.paine@test.com\",\n            \"gender\": \"male\",\n            \"status\": \"active\"\n        }\n        const res = await request2.post('users').set('Authorization','Bearer 1eaa7c6e1d432291b2a004e343c654ff3b37724a2cca3f81c8d4d997bd9d9187').send(data);\n        console.log(res.body.data);\n        console.log(res.status);\n        await expect(res.status).equal(201);\n        await expect(res.body).to.not.be.empty;",
+              "err": {
+                "message": "AssertionError: expected 422 to equal 201",
+                "estack": "AssertionError: expected 422 to equal 201\n    at Context.<anonymous> (test\\index.js:65:34)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- 422\n+ 201\n"
+              },
+              "uuid": "f2880e3c-db1f-400c-9a0f-045fc5f2eff9",
+              "parentUUID": "3cadf9fb-e2e0-4b5b-b019-8dea7fc80571",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f2880e3c-db1f-400c-9a0f-045fc5f2eff9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 560,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

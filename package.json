@@ -5,24 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "type": "module",
-    "generateMochawesome": "marge F:\\VS code - projects\\webdriverio\\APIAutomation\\run\\results.json --MyReport 'APi Automation Results'"
+    "type": "module"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.18.9",
-    "@babel/core": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@babel/register": "^7.18.9",
     "@wdio/cli": "^7.20.7",
     "chai": "^4.3.6",
+    "chance-cli": "^1.0.7",
     "mocha": "^6.2.3",
     "mochawesome": "^7.1.3",
     "supertest": "^6.2.4"
-  },
-  "dependencies": {
-    "wdio-mochawesome-reporter": "^2.0.1"
   }
 }

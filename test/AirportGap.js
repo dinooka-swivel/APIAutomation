@@ -5,7 +5,6 @@ const chance = require('chance').Chance();
 const config = require('./config.json');
 
 const request = supertest(config.request);
-const request2 = supertest(config.request2);
 
 describe('Airports', () => {
 
@@ -19,7 +18,7 @@ describe('Airports', () => {
         await expect(res.body).to.not.be.empty;
     });
 
-    it('Test_02_Get 1 Airports', async () => {
+    it('Test_02_Get a single Airport', async () => {
 
         const res = await request.get('airports/PFJ');
 
@@ -47,23 +46,5 @@ describe('Airports', () => {
         await expect(res.status).equal(200);
         await expect(res.body).to.not.be.empty;
     });
-
-    it('Test_04_POST create users', async () => {
-
-        const data = {
-            "name": chance.name(),
-            "email": chance.email({domain: "gmail.com"}),
-            "gender": "male",
-            "status": "active"
-        }
-        const res = await request2.post('users').set('Authorization', config.token).send(data);
-        
-
-        console.log(res.body.data);
-        console.log(res.status);
-
-        await expect(res.status).equal(201);
-        await expect(res.body).to.not.be.empty;
-
-    });
+    
 });

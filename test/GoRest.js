@@ -23,7 +23,7 @@ describe('Users', () => {
         console.log(res.body.data);
         console.log(res.status);
 
-        await expect(res.status).equal(201);
+        await expect(res.status).equal(201);        
         await expect(res.body).to.not.be.empty;
 
     });

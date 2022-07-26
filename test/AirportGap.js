@@ -1,7 +1,6 @@
 
 const supertest = require('supertest');
 const expect = require('chai').expect;
-const chance = require('chance').Chance();
 const config = require('./config.json');
 
 const request = supertest(config.request);
@@ -37,8 +36,6 @@ describe('Airports', () => {
 
         }
         const res = await request.post('airports/distance').send(data);
-
-
 
         console.log(res.body.data);
         console.log(res.status);
